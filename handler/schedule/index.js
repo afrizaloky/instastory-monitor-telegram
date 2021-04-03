@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { loadData, updateData } = require("../../util.js");
 const schedule = require("node-schedule");
-const owner = "628986657752@c.us";
+const owner = process.env.owner;
 const { exec } = require("child_process");
 
 async function collect() {
