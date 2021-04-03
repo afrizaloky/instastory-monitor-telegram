@@ -51,10 +51,10 @@ async function sendStory(client) {
 // twice a day
 // 00 01,13 * * *
 module.exports = scheduleHandler = async client => {
-  var collect1 = schedule.scheduleJob("*/3 * * * *", async function () {
+  var collect1 = schedule.scheduleJob("00 01,13 * * *", async function () {
     collect();
   });
-  var sendWhatsapp = schedule.scheduleJob("*/2 * * * *", async function () {
+  var sendWhatsapp = schedule.scheduleJob("00 02,14 * * *", async function () {
     sendStory(client);
   });
 };
